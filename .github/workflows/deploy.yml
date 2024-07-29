@@ -27,6 +27,10 @@ on:
       TELEGRAM_HASH:
         description: 'Telegram HASH from https://my.telegram.org/'
         required: true
+      TEAM_HEROKU:
+        description: 'Optionally Deploy to heroku'
+        required: true
+        
 jobs:
   deploy:
     runs-on: ubuntu-latest
