@@ -27,10 +27,6 @@ on:
       TELEGRAM_HASH:
         description: 'Telegram HASH from https://my.telegram.org/'
         required: true
-     HEROKU_TEAM:
-       description : 'Optionall You Can Add heroku Team'
-       required: false
-          
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -46,11 +42,11 @@ jobs:
           heroku_api_key: ${{inputs.HEROKU_API_KEY}}
           heroku_app_name: ${{inputs.HEROKU_APP_NAME}}
           heroku_email: ${{inputs.HEROKU_EMAIL}}
-          heroku_team: ${{input.HEROKU_TEAM}}
           usedocker: true
           docker_heroku_process_type: web
           stack: "container"
           region: "eu"
+          team: ${{inputs.HEROKU_TEAM_NAME}}
         env:
           HD_OWNER_ID: ${{inputs.OWNER_ID}}
           HD_TELEGRAM_API: ${{inputs.TELEGRAM_API}}
