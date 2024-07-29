@@ -27,7 +27,7 @@ on:
       TELEGRAM_HASH:
         description: 'Telegram HASH from https://my.telegram.org/'
         required: true
-      TEAM_HEROKU:
+      HEROKU_TEAM_NAME:
         description: 'Optionally Deploy to heroku'
         required: true
         
